@@ -1,0 +1,43 @@
+﻿<Window x:Class="UsenetProgram.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsenetProgram.Views"
+        mc:Ignorable="d"
+        Title="LoginView" Height="250" Width="275">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,10,10,10">
+            <TextBlock Width="75" Text="HOST/IP:"/>
+            <TextBox Width="150" Text="{Binding Host}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10,10,10,10">
+            <TextBlock Width="75" Text="Port:"/>
+            <TextBox Width="150" Text="{Binding Port}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10,10,10,10">
+            <TextBlock Width="75" Text="Login:"/>
+            <TextBox Width="150" Text="{Binding Login}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10,10,10,10">
+            <TextBlock Width="75" Text="Password:"/>
+            <TextBox Width="150" Text="{Binding Password}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,10,10,10">
+            <Button Width="75" Content="Cancel" Command="{Binding CancelCMD}"/>
+            <Button Width="75" Content="Connect" Command="{Binding LoginCMD}"/>
+        </StackPanel>
+    </Grid>
+</Window>
